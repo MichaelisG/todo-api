@@ -1,0 +1,14 @@
+App\Entity\Todo:
+  normalizationContext:
+    groups: ['todo:read']
+  denormalizationContext:
+    groups: ['todo:write']
+
+  operations:
+    ApiPlatform\Metadata\GetCollection:
+      normalizationContext:
+        groups: ['todo:read:collection']
+    ApiPlatform\Metadata\Post: ~
+    ApiPlatform\Metadata\Get: ~
+    ApiPlatform\Metadata\Delete: ~
+    ApiPlatform\Metadata\Put: ~
