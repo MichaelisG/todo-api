@@ -1,0 +1,15 @@
+App\Entity\TodoCategory:
+  attributes:
+    id:
+      groups: ['todocategory:read', 'todocategory:read:collection']
+    code:
+      groups: ['todocategory:read', 'todocategory:read:collection', 'todocategory:write']
+    libelle:
+      groups: ['todocategory:read', 'todocategory:read:collection', 'todocategory:write']
+    todos:
+      groups: ['todocategory:read']
+
+App\Entity\Todo:
+  attributes:
+    id:
+      groups: ['todocategory:read']

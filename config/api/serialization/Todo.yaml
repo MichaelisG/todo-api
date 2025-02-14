@@ -1,0 +1,19 @@
+App\Entity\Todo:
+  attributes:
+    id:
+      groups: ['todo:read', 'todo:read:collection']
+    title:
+      groups: ['todo:read', 'todo:read:collection', 'todo:write']
+    description:
+      groups: ['todo:read', 'todo:write']
+    category:
+      groups: ['todo:read', 'todo:read:collection', 'todo:write']
+
+App\Entity\TodoCategory:
+  attributes:
+    id:
+      groups: ['todo:read', 'todo:read:collection', 'todo:write']
+    code:
+      groups: ['todo:read', 'todo:read:collection']
+    libelle:
+      groups: ['todo:read']
